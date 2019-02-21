@@ -5,7 +5,7 @@ html {
 }
 body {
     height: 100%;
-    background-image: url("/images/backgrounds/img7.jpg");
+    background-image: url("ScifiBookshelf/images/backgrounds/img7.jpg");
     background-repeat: no-repeat, repeat;
     /*background-color: #fff;*/
     background-size: cover;
