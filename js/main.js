@@ -317,7 +317,7 @@ function update_bookshelf(data) {
           d["Summary"].substring(0, bookshelfTipMaxSummaryLength) + "..."
           : d["Summary"];
       var imageHTML =
-          "<img src=\"/images/Covers/" + d["Goodreads Id"] + ".jpg\""
+          "<img src=\"images/Covers/" + d["Goodreads Id"] + ".jpg\""
           + " height=\"" + bookRatio * bookshelfTipImageWidth + "\" width=\""
           + bookshelfTipImageWidth + "\" align=\"left\">";
       return "<strong>" + d["Title"] + "</strong><br>" + d["Authors"]
@@ -349,7 +349,7 @@ function update_bookshelf(data) {
     .attr("height", bookHeight)
     .attr("width", bookWidth)
     .attr("xlink:href",
-      function(d) { return "/images/Covers/" + d["Goodreads Id"] + ".jpg"; });
+      function(d) { return "images/Covers/" + d["Goodreads Id"] + ".jpg"; });
   newBook
     .on("mouseover", bookshelfTip.show)
     .on("mouseout", bookshelfTip.hide)
