@@ -1,0 +1,201 @@
+html {
+    height: 100%;
+    font-family: ;
+    background-color: black;
+}
+body {
+    height: 100%;
+    background-image: url("/images/backgrounds/img7.jpg");
+    background-repeat: no-repeat, repeat;
+    /*background-color: #fff;*/
+    background-size: cover;
+    overflow: hidden;
+}
+.full-height {
+    height: 100%;
+}
+
+/* #main-header and #main-content height should add to 100% */
+h3#main-header {
+    margin: 0px !important;
+    padding: 28px 0px 0px 150px !important;
+    height: 42px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+}
+#main-content {
+    padding: 22px 150px 0px 150px;
+    height: calc(100% - 64px);
+}
+
+/* FILTERS */
+/* #filter-panel and #bookshelf-panel height should add to 100% */
+div#filter-panel {
+    margin-left: 0px;
+    height: 95px;
+}
+div#filter-container {
+    /*background-color: rgba(0,12,19,0.5);*/
+    height: calc(100% - 27px);  /* subtract .panel-title */
+    overflow-x: scroll;
+    overflow-y: scroll;
+    /*white-space: nowrap;*/
+}
+div.filter {
+    background-color: orangered;
+    display: inline-block;
+    padding: 5px;
+    font-size: 12px;
+    color: #fff;
+    margin: 5px 5px 5px 0px;
+    border-radius: 2px;
+}
+/* BOOKSHELF */
+div#bookshelf-panel {
+    position: relative;
+    margin-left: 0px;
+    height: calc(100% - 70px);
+}
+svg#bookshelf {
+    /*background-color: #F7F7F7;*/
+    width: 100%;
+    height: calc(100% - 52px);
+}
+
+/* CONTROL PANELS */
+div.control-panels-container {
+    background-color: #000;
+}
+div.control-panel {
+    background-color: rgba(0,0,0,0.2);
+}
+h4.panel-title {  /* e.g. "Keywords", "Sentiment", etc. */
+    max-height: 26px;
+    margin: 2px 0px 4px 0px !important;
+    padding: 0px !important;
+    font-size: 16px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 100;
+    color: #fff;
+}
+svg.control-panel-canvas {
+    background-color: rgba(0,12,19,0.5);
+    height: calc(100% - 27px);
+    width: 99%;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+svg.mouseover-panel-canvas {
+    background-color: rgba(0,12,19,0.5);
+    height: calc(100% - 27px);
+    /*height: 100%;*/
+    width: 100%;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+/* panel heights should sum to 100% */
+div#timeline-panel {
+    height: 25%;
+}
+svg.mouseover-panel-canvas:hover {
+    background-color: rgba(0,12,19,0.7);
+}
+div#planets-panel {
+    height: 17%;
+}
+div#authors-panel {
+    height: 17%;
+}
+div#keywords-panel {
+    height: 17%;
+}
+div#sentiment-panel {
+    height: 24%;
+}
+
+.timeline-brushed-bar {
+    fill: #fff;
+}
+.timeline-vertical-line {
+    stroke: #fff;
+    stroke-width: 2px;
+    opacity: 0.25;
+    stroke-dasharray: 3 1;  /* dashed line */
+}
+.timeline-legend-text {
+  font-size: 12px;
+  fill: #fff;
+  text-anchor: start;
+}
+.sentiment-brushed-dot {
+    fill: #fff !important;
+    opacity: 0.75 !important;
+}
+.chart-axis line {
+    stroke: #fff;
+}
+.chart-axis path {
+    stroke: #fff;
+}
+.chart-axis text {
+    fill: #fff;
+}
+text.axis-label {
+    fill: #fff;
+    font-size: 12px;
+    text-anchor: end;
+}
+
+
+
+/*
+ * TOOLTIP
+ * Adapted from: http://bl.ocks.org/davegotz/bd54b56723c154d25eedde6504d30ad7
+ */
+.d3-tip {
+  line-height: 1;
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  max-width: 350px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+  background-color: rgba(0,12,19,0.5);
+}
+/* Style northward tooltips specifically */
+.d3-tip.n:after {
+  margin: -2px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.timeline-brushed-bar:hover {
+    fill: orangered;
+}
+
+.grid .tick {
+    stroke: lightgrey;
+    opacity: 0.7;
+}
+.grid path {
+      stroke-width: 0;
+}

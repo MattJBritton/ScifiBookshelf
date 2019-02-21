@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Solar System Bookshelf</title>
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="./lib/d3.js"></script>
+  <script src="./lib/d3.tip.v0.6.3.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/intro.js"></script>
+  <link href="./css/introJs.css" rel="stylesheet">
+  <link href="./css/main.css" rel="stylesheet">
+  <link href="./lib/bootstrap.min.v3.3.7.css" rel="stylesheet">
+  <script src="./lib/jquery.min.v3.2.1.js"></script>
+  <script src="./lib/bootstrap.min.v3.3.7.js"></script>
+</head>
+
+<body onload="load_data(); introJs().start();"><!-- defined in main.js-->
+<div class="container-fluid full-height">
+    <div class="row">
+        <h3 id="main-header">The Solar System Science Fiction Bookshelf</h3>
+    </div>
+    <div class="row" id="main-content">
+        <!-- Control Panel -->
+        <div class="col-md-7  full-height">
+            <div data-intro="The timeline shows the number of scifi books written about our solar system throughout the years in blue. In grey, you can hover over the line to check out space-related historical events that have occurred. Using the lasso tool, you can filter the book results by date." class="row control-panel" id="timeline-panel">
+                <h4 class="panel-title">Timeline</h4>
+                <svg class="mouseover-panel-canvas" id="timeline"></svg>
+            </div>
+            <div data-intro="This treemap visualization shows the planets by the number of books written about each planet. Click on a planet to filter the book results." class="row control-panel" id="planets-panel">
+                <h4 class="panel-title">Planets</h4>
+                <svg class="control-panel-canvas" id="planets"></svg>
+            </div>
+            <div data-intro="This treemap visualization shows authors who have written space-related scifi and the number of books they've written throughout the years. Click on an author to filter the book results."class="row control-panel" id="authors-panel">
+                <h4 class="panel-title">Top Authors</h4>
+                <svg class="control-panel-canvas" id="authors"></svg>
+            </div>
+            <div data-intro="This treemap visualization updates with the most prominent keywords used in the books shown in the results pane. Click on a keyword to filter the book results by keyword."class="row control-panel" id="keywords-panel">
+                <h4 class="panel-title">Top Keywords</h4>
+                <svg class="control-panel-canvas" id="keywords"></svg>
+            </div>
+            <div data-intro="This chart displays the sentiment of the books. Using the lasso tool, select a section of sentiment to filter the books. You can also move the selection box around to see how the filtered results change." class="row control-panel" id="sentiment-panel">
+                <h4 class="panel-title">Sentiment</h4>
+                <svg class="mouseover-panel-canvas" id="sentiment"></svg>
+            </div>
+        </div>
+
+        <!-- Bookshelf & filters -->
+        <div class="col-md-5 full-height">
+            <div data-intro="When you click on something, you create a filter. You can also remove those filters here."class="row" id="filter-panel">
+              <h4 class="panel-title">Filters</h4>
+              <div id="filter-container"></div>
+            </div>
+            <div class="row" id="bookshelf-panel">        
+                <h4 class="panel-title">Results (<span id="results-count">0</span>)</h4>        
+                <svg data-intro="View the results of your query. You can also get more information about the book from Goodreads by holding down cmd and clicking on the boo cover." id="bookshelf"></svg>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

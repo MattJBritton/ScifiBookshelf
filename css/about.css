@@ -1,0 +1,22 @@
+html {
+    height: 100%;
+    font-family: ;
+}
+body {
+    height: 100%;
+    background-image: url("/images/backgrounds/muppet.jpg");
+    background-repeat: no-repeat, repeat;
+    /*background-color: #fff;*/
+    background-size: cover;
+    overflow: hidden;
+}
+.full-height {
+    height: 100%;
+}
+
+/* #main-header and #main-content height should add to 100% */
+h3#main-header {
+    margin: 0px !important;
+    padding: 300px 0px 0px 40px !important;
+    height: 42px;
+}
